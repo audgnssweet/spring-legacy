@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="36ea8788-4615-4dff-b1fd-0b3732941fca" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="36ea8788-4615-4dff-b1fd-0b3732941fca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/CardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/CardManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/dao/BusinessCardManagerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/dao/BusinessCardManagerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/dto/BusinessCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/dto/BusinessCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/ui/CardManagerUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/ui/CardManagerUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/org.edwith.webbe/cardmanager/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/org.edwith.webbe/cardmanager/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/edwith/webbe/cardmanager/CardManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/edwith/webbe/cardmanager/CardManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/edwith/webbe/cardmanager/dao/BusinessCardManagerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/edwith/webbe/cardmanager/dao/BusinessCardManagerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/edwith/webbe/cardmanager/dto/BusinessCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/edwith/webbe/cardmanager/dto/BusinessCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/edwith/webbe/cardmanager/exception/PhoneInvalidException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/edwith/webbe/cardmanager/exception/PhoneInvalidException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/edwith/webbe/cardmanager/ui/CardManagerUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/edwith/webbe/cardmanager/ui/CardManagerUI.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,40 +34,8 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/dao/BusinessCardManagerDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="35" />
-              <folding>
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#328#329#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/ui/CardManagerUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/CardManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="24" column="95" selection-start-line="24" selection-start-column="95" selection-end-line="24" selection-end-column="95" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -57,19 +45,13 @@
       </list>
     </option>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="563" />
     <option name="y" value="95" />
     <option name="width" value="1954" />
     <option name="height" value="1176" />
   </component>
+  <component name="ProjectId" id="1nOwDYmdt3QCKVCPTLIVpYqgd9e" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -143,27 +125,21 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
     <configuration name="CardManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -179,12 +155,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.CardManager" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="36ea8788-4615-4dff-b1fd-0b3732941fca" name="Default Changelist" comment="" />
@@ -194,6 +182,8 @@
       <updated>1581842005409</updated>
       <workItem from="1581842006533" duration="1555000" />
       <workItem from="1582352140415" duration="6000" />
+      <workItem from="1611274329079" duration="418000" />
+      <workItem from="1611372745688" duration="3204000" />
     </task>
     <servers />
   </component>
@@ -237,7 +227,23 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/org/edwith/webbe/cardmanager/dao/BusinessCardManagerDao.java">

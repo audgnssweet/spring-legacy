@@ -3,6 +3,7 @@ package org.edwith.webbe.cardmanager.dto;
 import java.util.Date;
 
 public class BusinessCard {
+
     private String name;
     private String phone;
     private String companyName;
@@ -50,10 +51,10 @@ public class BusinessCard {
     @Override
     public String toString() {
         return "BusinessCard{" +
-                "name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", companyName='" + companyName + '\'' +
-                ", createDate=" + createDate +
-                '}';
+            "name='" + name + '\'' +
+            ", phone='" + phone + '\'' +
+            ", companyName='" + companyName + '\'' +
+            ", createDate=" + createDate +
+            '}';
     }
 }
