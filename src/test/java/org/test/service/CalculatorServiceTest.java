@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.test.config.ApplicationConfig;
 
+//통합 테스트
 @SpringJUnitConfig(ApplicationConfig.class)
 class CalculatorServiceTest {
 

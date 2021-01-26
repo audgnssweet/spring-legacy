@@ -14,6 +14,6 @@ public class Main {
         CalculatorService calculatorService = configurableApplicationContext
             .getBean(CalculatorService.class);
 
-        System.out.println(calculatorService.plus(1,2));
+        System.out.println(calculatorService.plus(1, 2));
     }
 }
