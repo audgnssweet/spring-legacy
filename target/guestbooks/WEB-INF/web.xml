@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!--  설정파일들을 나누어 놓았기 때문에 설정해줘야 하는 부분들.-->
+  <!--  service단과 repository단을 나누어줬기 때문에 그 녀석들도 설정 해 주어야 한다.-->
+
+
+  <!--  listener은 특정한 event가 일어났을 때 동작한다.-->
+  <!--  contextLoaderListener은 server가 run할 때 막 올라가잖아. context가 loading되는 event가 일어났을 때-->
+  <!--  이 녀석을 실행해줘요.-->
+  <!--  context란? 필요한 정보를 가지고 있는 설정파일.-->
+  <!--  contextLoaderListener -> root-context -> 이 컨텍스트에 등록되는 빈들은 모든 context에서 사용-->
+  <!--  dispatcherservlet -> servlet-context -> 이 컨텍스트에 등록되는 빈들은 servlet context에서만 사용-->
+  <!--  가장 이상적인 방법 ? servlet-context 는 controller, root-context는 service, repository.-->
+  <!--  listener가 실행될 때 context-param에 있는 녀석들을 참조하게 된다.-->
+  <context-param>
+    <param-name>contextClass</param-name>
+    <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+    </param-value>
+  </context-param>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>com.audgnssweet.config.ApplicationConfig</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <!--  얘는 servlet webapplicationcontext를 설정. 역할의 분리임. 얘는 controller관련만. 전역사용불가.-->
+  <!--  WebMvcContextConfiguration.class 에서는 controller와 view 관련 설정만 하고 있음.-->
+  <!--  그걸 설정할 때 필요한 resourcehandler와 viewresolver등도 같이 설정하고 있음.-->
+  <servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextClass</param-name>
+      <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+      </param-value>
+    </init-param>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>com.audgnssweet.config.WebMvcContextConfiguration</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <!--  요청이 수행되기 전, 응답이 나가기 전 한 번씩 걸쳐서 나가는 통로가 filter. 이녀석을 설정해줄 수 있음.-->
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>
