@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <bean id="userBean" class="kr.or.connect.beans.UserBean"/>
+  <bean id="engine" class="kr.or.connect.beans.Engine" />
+  <bean id="car" class="kr.or.connect.beans.Car">
+    <property name="engine" ref="engine" />
+  </bean>
+</beans>
+
+  <!-- main-resources 안에 있는 applicationContext.xml파일은
+   경로가 spring-maven의 권장값을 따르기 떄문에 자동으로 classpath에 등록되고
+   그래서 classpathXml로 사용이 가능하다.
+   -->
