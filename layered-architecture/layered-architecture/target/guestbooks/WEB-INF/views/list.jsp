@@ -15,7 +15,7 @@
 <body>
 
 <h1>방명록</h1>
-<br> 방명록 전체 수 : ${count }
+<br> 방명록 전체 수 : ${count } ${cookieCount} 번째 방문입니다.
 <br>
 <br>
 

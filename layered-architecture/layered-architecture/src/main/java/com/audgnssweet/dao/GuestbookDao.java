@@ -20,11 +20,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class GuestbookDao {
 
-    private NamedParameterJdbcTemplate jdbcTemplate;
-    private RowMapper<Guestbook> guestbookRowMapper;
-    private SimpleJdbcInsert simpleJdbcInsert;
+    private final NamedParameterJdbcTemplate jdbcTemplate;
+    private final RowMapper<Guestbook> guestbookRowMapper;
+    private final SimpleJdbcInsert simpleJdbcInsert;
 
-    @Autowired
     public GuestbookDao(DataSource dataSource) {
         jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
         guestbookRowMapper = new BeanPropertyRowMapper<>(Guestbook.class);
