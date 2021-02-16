@@ -8,19 +8,6 @@ public class Member {
     private Integer id;
     private String name;
     private String password;
-
-    @Override
-    public String toString() {
-        return "Member{" +
-            "id=" + id +
-            ", name='" + name + '\'' +
-            ", password='" + password + '\'' +
-            ", email='" + email + '\'' +
-            ", createDate=" + createDate +
-            ", modifyDate=" + modifyDate +
-            '}';
-    }
-
     private String email;
     private LocalDateTime createDate;
     private LocalDateTime modifyDate;
@@ -83,5 +70,18 @@ public class Member {
 
     public void setModifyDate(LocalDateTime modifyDate) {
         this.modifyDate = modifyDate;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Member{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", password='" + password + '\'' +
+            ", email='" + email + '\'' +
+            ", createDate=" + createDate +
+            ", modifyDate=" + modifyDate +
+            '}';
     }
 }

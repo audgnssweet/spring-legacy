@@ -6,4 +6,8 @@ public class MemberRoleDaoSqls {
         "select member_role.id, member_role.member_id, member_role.role_name from member_role "
             + "join member on member_role.member_id = member.id "
             + "where member.email = :email";
+
+    public static final String INSERT =
+        "insert into member_role "
+            + "(member_id, role_name) values(:memberId, :roleName)";
 }

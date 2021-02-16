@@ -5,7 +5,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@ComponentScan(basePackages = {"com.audgnssweet.service", "com.audgnssweet.dao"})
+@ComponentScan(basePackages = {"com.audgnssweet.service", "com.audgnssweet.dao",
+    "com.audgnssweet.security"})
 @Import(DBConfig.class)
 public class ApplicationConfig {
 

@@ -1,9 +1,11 @@
 package com.audgnssweet.dao;
 
+import static com.audgnssweet.dao.sqls.MemberRoleDaoSqls.INSERT;
 import static com.audgnssweet.dao.sqls.MemberRoleDaoSqls.SELECT_ALL_BY_EMAIL;
 
 import com.audgnssweet.entity.MemberRole;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.sql.DataSource;
@@ -27,5 +29,13 @@ public class MemberRoleDao {
     public List<MemberRole> findAllByEmail(String email) {
         final Map<String, String> map = Collections.singletonMap("email", email);
         return template.query(SELECT_ALL_BY_EMAIL, map, mapper);
+    }
+
+
+    public Integer addUserMemberRole(Integer memberId) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("memberId", memberId);
+        map.put("roleName", "ROLE_USER");
+        return template.update(INSERT, map);
     }
 }

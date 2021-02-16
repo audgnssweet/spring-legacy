@@ -9,5 +9,4 @@ public interface UserDbService {
     User getUser(String username);
 
     List<UserRole> getUserRoles(String username);
-
 }
