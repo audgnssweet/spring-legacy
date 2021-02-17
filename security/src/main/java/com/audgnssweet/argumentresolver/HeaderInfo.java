@@ -6,7 +6,7 @@ import java.util.Map;
 public class HeaderInfo {
 
     //map을 직접 사용할 수 없기 때문에.
-    private Map<String, String> map;
+    private final Map<String, String> map;
 
     public HeaderInfo () {
         map = new HashMap<>();

@@ -1,4 +1,4 @@
-package com.audgnssweet.intercepter;
+package com.audgnssweet.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-public class LogIntercepter extends HandlerInterceptorAdapter {
+public class LogInterceptor extends HandlerInterceptorAdapter {
 
     //Slf4j의 logger을 설정해주는 것.
     private final Logger logger = LoggerFactory.getLogger(this.getClass());

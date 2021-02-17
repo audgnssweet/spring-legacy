@@ -1,7 +1,7 @@
 package com.audgnssweet.config;
 
 import com.audgnssweet.argumentresolver.HandlerMapArgumentResolver;
-import com.audgnssweet.intercepter.LogIntercepter;
+import com.audgnssweet.interceptor.LogInterceptor;
 import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -45,7 +45,7 @@ public class MvcConfig implements WebMvcConfigurer {
     //addPathPatterns로 특정 주소값에 대해서만 호출도 가능.
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LogIntercepter()).addPathPatterns("/members/**");
+        registry.addInterceptor(new LogInterceptor()).addPathPatterns("/members/**");
     }
 
     @Override
