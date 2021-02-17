@@ -1,5 +1,6 @@
 package com.audgnssweet.controller;
 
+import com.audgnssweet.argumentresolver.HeaderInfo;
 import com.audgnssweet.dao.MemberDao;
 import com.audgnssweet.entity.Member;
 import com.audgnssweet.security.UserDetails;
@@ -36,7 +37,9 @@ public class MemberController {
     }
 
     @GetMapping("/memberinfo")
-    public String info(@AuthenticationPrincipal UserDetails userDetails, ModelMap map) {
+    public String info(@AuthenticationPrincipal UserDetails userDetails, ModelMap map,
+        HeaderInfo headerInfo) {
+
         final Member foundMember = memberDao.findByEmail(userDetails.getUsername());
         map.addAttribute("member", foundMember);
         return "members/memberinfo";
