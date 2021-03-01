@@ -2,7 +2,6 @@ package com.audgnssweet.controller;
 
 import com.audgnssweet.entity.Member;
 import com.audgnssweet.service.MemberService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +18,6 @@ public class MainController {
 
     private final PasswordEncoder encoder;
 
-    @Autowired
     public MainController(MemberService memberService, PasswordEncoder encoder) {
         this.memberService = memberService;
         this.encoder = encoder;
