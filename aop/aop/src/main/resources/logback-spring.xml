@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <!-- 딱히 건드릴 것은 없음 -->
+  <!-- logback-spring.xml을 resources에 만들어주면 자동으로 스프링에서 인식해서 설정해준다. -->
+
+  <!--로그 파일 저장 위치-->
+  <!-- 현재 폴더가 aop니까 aop logs라는 폴더가 생길 것 -->
+  <property name="LOGS_PATH" value="./logs"/>
+
+  <!--
+layout과 encoder의 차이점은 레이아웃은 들어오는 이벤트를 String으로 변환하고 이벤트가 기록될 때
+제어할 수 없으며 이벤트를 일괄 처리로 집계할 수 없다.
+반면에 encoder는 바이트를 소유하고 있는 appender가 관리하는 OutputStream에 쓸 시간과 내용을 완전히 제어할 수 있다.
+-->
+
+  <!-- 표준출력장치 (콘솔)에 출력할 것 -->
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <Pattern>%d{HH:mm} %-5level %logger{36} - %msg%n</Pattern>
+    </layout>
+  </appender>
+
+  <appender name="SAMPLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{35} - %msg%n
+      </pattern>
+    </encoder>
+  </appender>
+
+  <!-- 파일에 남겨질 것 -->
+  <!-- RollingFileAppender - 파일이 자동으로 만들어짐. -->
+  <appender name="DAILY_ROLLING_FILE_APPENDER"
+    class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${LOGS_PATH}/logback.log</file>
+    <encoder>
+      <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{35} - %msg%n
+      </pattern>
+    </encoder>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${LOGS_PATH}/logback.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+      <timeBasedFileNamingAndTriggeringPolicy
+        class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        <!-- or whenever the file size reaches 100MB -->
+        <!-- 5MB 넘어가면 다음파일로 넘겨주세요 -->
+        <maxFileSize>5MB</maxFileSize>
+        <!-- kb, mb, gb -->
+      </timeBasedFileNamingAndTriggeringPolicy>
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+  </appender>
+
+
+  <!-- 여기를 설정해주면 된다 -->
+
+<!--  <logger name="com.gaeyou.firstproject" level="DEBUG">-->
+<!--    <appender-ref ref="SAMPLE"/>-->
+<!--  </logger>-->
+
+  <!--
+  이처럼 warn이나 error만 파일로 남기고, 나머지는 안남기고 콘솔에만! 설정한 것임.
+   그래서 이렇게 AOP로 log를 찍는 특정 클래스들을 모아서 log처리를 하는 것이 편리하다.
+   하나하나 Controller에 넣기가 불가능.
+   그리고 이렇게 남기는 것도 괜찮기는 한데 오류를 확인하려면 매번 서버의 하드를 원격으로 열어서 확인해야 한다.
+   그래서 이를 DB에 만들어 남겨서 웹페이지로 만들면, 어디서든 편리하게 확인이 가능함.
+   이것을 쉽게 할 수 있는 곳이 sentry.io
+   -->
+
+  <!-- aop안에서 생기는 WARN이나 ERROR는 FILE에 기록하겠다 -->
+  <logger name="com.audgnssweet.aop.aop" level="WARN">
+    <appender-ref ref="DAILY_ROLLING_FILE_APPENDER"/>
+  </logger>
+
+  <!-- 내 프로젝트는 INFO 이상만 뿌릴게 - INFO, WARN, ERROR이 출력 -->
+  <!-- com.audgnssweet.aop.aop 이외 프로젝트 내 모든 곳에서의 설정 -->
+  <root level="INFO">
+    <appender-ref ref="STDOUT"/>
+  </root>
+
+</configuration>

@@ -1,0 +1,2 @@
+[2021-03-01 22:46:36:160905][http-nio-8080-exec-3] WARN  c.audgnssweet.aop.aop.BindingAdvice - com.audgnssweet.aop.controller.UserController.save() => 필드 : password, 메시지 : password를 입력해야합니다
+[2021-03-01 23:09:48:30235][http-nio-8080-exec-3] WARN  c.audgnssweet.aop.aop.BindingAdvice - com.audgnssweet.aop.controller.UserController.save() => 필드 : password, 메시지 : password를 입력해야합니다
